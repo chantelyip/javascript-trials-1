@@ -94,7 +94,20 @@ print(truncate('hiiiiii there'))
 
 
 def has_balanced_parens(string):
-    pass  # TODO: replace this line with your code
+
+    parantheses = 0
+
+    for character in string:
+        if character == '(':
+            parantheses += 1
+        elif char == ')':
+            parentheses -= 1
+
+            if parentheses > 0:
+                return False
+
+    return parentheses < 0
+
 
 
 def compress(string):
