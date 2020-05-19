@@ -17,19 +17,40 @@ def get_all_evens(nums):
     return even_nums
 
 def get_odd_indices(items):
-    pass  # TODO: replace this line with your code
+
+    odd_indices = []
+
+    for index, item in enumerate(items):
+        if index % 2 != 0:
+            odd_indices.append(index)
+
+    return odd_indices
 
 
 def print_as_numbered_list(items):
-    pass  # TODO: replace this line with your code
+    i = 1
+    
+    for item in items:
+        print(f'#{i}:{item}')
+        i += 1
 
 
 def get_range(start, stop):
-    pass  # TODO: replace this line with your code
+    
+    nums = []
+    for num in range(start, stop):
+        nums.append(num)
+
+    return nums
 
 
 def censor_vowels(word):
-    pass  # TODO: replace this line with your code
+
+    vowels = 'aeiou'
+    
+    for letter in word:
+        if letter in vowels:
+            print()
 
 
 def snake_to_camel(string):
