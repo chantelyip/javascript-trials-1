@@ -77,11 +77,20 @@ def longest_word_length(words):
         if len(word) > longest:
             longest = len(word)
     return longest
+
 print(longest_word_length(['jellyfish', 'zebra']))
 
 
 def truncate(string):
-    pass  # TODO: replace this line with your code
+
+    new_string = []
+
+    for letter in string:
+        if len(new_string) == 0 or letter != new_string[-1]:
+            new_string.append(letter)
+    return ''.join(new_string)
+
+print(truncate('hiiiiii there'))
 
 
 def has_balanced_parens(string):
