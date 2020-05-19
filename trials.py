@@ -46,16 +46,31 @@ def get_range(start, stop):
 
 def censor_vowels(word):
 
+    censored_word = []
+
     vowels = 'aeiou'
     
     for letter in word:
         if letter in vowels:
-            print()
+            censored_word.append('*')
+        else: 
+            censored_word.append(letter)
+
+    return ''.join(censored_word)
 
 
 def snake_to_camel(string):
-    pass  # TODO: replace this line with your code
 
+    camel_list = []
+
+    for word in string.split('_'):
+        print(word)
+        camel_list.extend([word.title()])
+
+    return "".join(camel_list)
+
+print(snake_to_camel('hello_world'))
+    
 
 def longest_word_length(words):
     pass  # TODO: replace this line with your code
